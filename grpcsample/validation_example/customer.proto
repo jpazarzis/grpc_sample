@@ -1,0 +1,15 @@
+ syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "validate/validate.proto";
+
+
+service CustomerManager {
+  rpc get(.google.protobuf.StringValue) returns (Customer) {}
+}
+
+message Customer {
+  string name = 1;
+  int32 age =  2 [(validate.rules).int32.lt = 100];
+}
+
