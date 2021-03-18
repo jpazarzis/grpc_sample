@@ -10,7 +10,7 @@ class CustomerManagerServicer(customer_pb2_grpc.CustomerManagerServicer):
     def get(self, request, context):
         """Implements the add method of the protocol buffer."""
         print("sending:", "Dow")
-        return customer_pb2.Customer(name='Joe Dow', age=9)
+        return customer_pb2.Customer(name='Joe Dow', age=200)
 
 
 def serve():

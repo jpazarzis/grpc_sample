@@ -23,8 +23,8 @@ def main():
                 validate(response)
             except ValidationFailed as err:
                 print(err)
-
-            print(response.name)
+            else:
+                print(response.name)
             time.sleep(0.2)
 
 
